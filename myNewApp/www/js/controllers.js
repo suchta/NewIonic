@@ -16,15 +16,6 @@ angular.module('starter.controllers', [])
                 targetHeight: 320,
                 saveToPhotoAlbum: true
             });
-            /*
-             navigator.camera.getPicture(function(imageURI) {
-             console.log(imageURI);
-             }, function(err) {
-             }, {
-             quality: 50,
-             destinationType: Camera.DestinationType.DATA_URL
-             });
-             */
         }
 })
 
@@ -46,6 +37,7 @@ angular.module('starter.controllers', [])
         $scope.long = '';
         $scope.lat = '...loading location';
         navigator.geolocation.getCurrentPosition(
+
             function(pos){
                 console.log('we have current position' + pos.coords.latitude)
                 $scope.lat = pos.coords.latitude;
