@@ -40,8 +40,8 @@ angular.module('starter.controllers', [])
 
             function(pos){
                 console.log('we have current position' + pos.coords.latitude)
-                $scope.lat = pos.coords.latitude;
-                $scope.long = pos.coords.longitude;
+                $scope.lat = Math.round(pos.coords.latitude * 1000)/1000;
+                $scope.long = Math.round(pos.coords.longitude * 1000)/1000;
                 $scope.$apply();
             },
             function(error){
