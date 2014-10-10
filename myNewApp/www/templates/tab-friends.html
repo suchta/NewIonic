@@ -1,9 +1,22 @@
 <ion-view title="Friends">
   <ion-content>
-    <ion-list>
-      <ion-item ng-repeat="friend in friends" type="item-text-wrap" href="#/tab/friend/{{friend.id}}">
-        {{friend.name}}
-      </ion-item>
-    </ion-list>
+      <div class="list card" data-ng-repeat="image in imageList">
+
+          <div class="item item-avatar">
+              <img ng-src="{{image.player.avatar_url}}">
+              <h2>{{image.player.username}}</h2>
+              <p>{{image.player.location}}</p>
+          </div>
+
+          <div class="item item-image">
+              <img data-ng-src="{{image.image_url}}">
+          </div>
+
+          <a class="item item-icon-left bar bar-stable" target="_blank" data-ng-href="{{image.url}}">
+          <i class="icon energized ion-link"></i>
+              View Original
+         </a>
+
+      </div>
   </ion-content>
 </ion-view>
