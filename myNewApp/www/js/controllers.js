@@ -21,12 +21,15 @@ angular.module('starter.controllers', [])
 
 .controller('FriendsCtrl', function($scope, Friends, $http, $q) {
     console.log(' friends ctrl loaded ')
-
+        $scope.doRefresh = function(){
+            $scope.init();
+        }
         $scope.init = function(){
             $scope.getImages()
                 .then(function(res){
                     //success
-                  //  console.log('Images: ', res)
+                    console.log('Images: ', res)
+                    $scope.$broadcast('scroll.refreshComplete');
                     $scope.imageList = res.shots;
                 },function(status){
                     //error
@@ -50,10 +53,6 @@ angular.module('starter.controllers', [])
 
         }
         $scope.init();
-
-
-
-    $scope.friends = Friends.all();
 
 })
 

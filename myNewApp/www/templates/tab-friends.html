@@ -1,6 +1,7 @@
-<ion-view title="Friends">
+<ion-view title="Dribble">
   <ion-content>
-      <div class="list card" data-ng-repeat="image in imageList">
+      <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()"></ion-refresher>
+      <ion-item class="list card" data-ng-repeat="image in imageList">
 
           <div class="item item-avatar">
               <img ng-src="{{image.player.avatar_url}}">
@@ -12,11 +13,11 @@
               <img data-ng-src="{{image.image_url}}">
           </div>
 
-          <a class="item item-icon-left bar bar-stable" target="_blank" data-ng-href="{{image.url}}">
+          <a class="item item-icon-left bar bar-stable" target="_top" data-ng-href="{{image.url}}">
           <i class="icon energized ion-link"></i>
               View Original
          </a>
 
-      </div>
+      </ion-item>
   </ion-content>
 </ion-view>

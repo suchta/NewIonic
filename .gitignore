@@ -1,2 +1,4 @@
 # Created by .gitignore support plugin (hsz.mobi)
 myNewApp/npm-debug.log
+
+.idea/workspace.xml
