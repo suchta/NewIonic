@@ -9,4 +9,4 @@ Ionic is a conduit that allows the application of AngularJS to the Cordova Frame
 
 Please visit the repository's Wiki page for more information. 
 
-This project will be made private November 2, 2014
+This project will be made private on November 2, 2014
