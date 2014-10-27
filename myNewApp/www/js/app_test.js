@@ -1,5 +1,7 @@
 // JPMC Ionic Team - Test Application
 
+//This file will be the testing version of the application. JS-10.27.2014
+
 myApp = angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 .config(function($compileProvider){
@@ -32,7 +34,7 @@ myApp = angular.module('starter', ['ionic', 'starter.controllers', 'starter.serv
     .state('tab', {
       url: "/tab",
       abstract: true,
-      templateUrl: "templates/tabs.html"
+      templateUrl: "../templates/tabs.html"
     })
 
     // Each tab has its own nav history stack:
@@ -41,7 +43,7 @@ myApp = angular.module('starter', ['ionic', 'starter.controllers', 'starter.serv
       url: '/dash',
       views: {
         'tab-dash': {
-          templateUrl: 'templates/tab-dash.html',
+          templateUrl: '../templates/tab-dash.html',
           controller: 'DashCtrl'
         }
       }
@@ -51,7 +53,7 @@ myApp = angular.module('starter', ['ionic', 'starter.controllers', 'starter.serv
       url: '/friends',
       views: {
         'tab-friends': {
-          templateUrl: 'templates/tab-friends.html',
+          templateUrl: '../templates/tab-friends.html',
           controller: 'FriendsCtrl'
         }
       }
@@ -60,7 +62,7 @@ myApp = angular.module('starter', ['ionic', 'starter.controllers', 'starter.serv
       url: '/friend/:friendId',
       views: {
         'tab-friends': {
-          templateUrl: 'templates/friend-detail.html',
+          templateUrl: '../templates/friend-detail.html',
           controller: 'FriendDetailCtrl'
         }
       }
@@ -70,7 +72,7 @@ myApp = angular.module('starter', ['ionic', 'starter.controllers', 'starter.serv
       url: '/account',
       views: {
         'tab-account': {
-          templateUrl: 'templates/tab-account.html',
+          templateUrl: '../templates/tab-account.html',
           controller: 'AccountCtrl'
         }
       }
