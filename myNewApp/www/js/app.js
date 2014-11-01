@@ -1,6 +1,6 @@
 // JPMC Ionic Team - Test Application
 
-myApp = angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+myApp = angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'dash.module', 'map.module', 'dribble.module'])
 
 .config(function($compileProvider){
     $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
@@ -52,7 +52,7 @@ myApp = angular.module('starter', ['ionic', 'starter.controllers', 'starter.serv
       views: {
         'tab-friends': {
           templateUrl: 'templates/tab-friends.html',
-          controller: 'FriendsCtrl'
+          controller: 'DribbleCtrl'
         }
       }
     })
@@ -71,7 +71,7 @@ myApp = angular.module('starter', ['ionic', 'starter.controllers', 'starter.serv
       views: {
         'tab-account': {
           templateUrl: 'templates/tab-account.html',
-          controller: 'AccountCtrl'
+          controller: 'MapCtrl'
         }
       }
     });
